@@ -19,6 +19,14 @@ a:hover {
   color: #0366d6;
 }
 
+.content-center img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Optional: ensures the image scales down on smaller screens */
+}
+
+
 /* markdown content styles */
 blockquote {
   margin-top: 5px;
@@ -251,6 +259,8 @@ nav.navigation a.button {
 
 .profile {
   margin: 60px auto 0 auto;
+  margin-bottom: 60px auto 0 auto;
+
   text-align: center;
 }
 
@@ -260,6 +270,41 @@ nav.navigation a.button {
   height: 80px;
   border-radius: 50%;
 }
+
+
+
+.tags a {
+    background: #f2f2f2;
+    padding: 4px 7px;
+    color: #757575;
+    font-size: 14px;
+    margin-right: 3px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.tags a:hover {
+    color: #0366d6;
+}
+
+.tags-date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; /* Adjust as needed */
+    min-height: 24px; /* Ensure minimum height to account for no tags */
+}
+
+.tags {
+    margin-bottom: 0;
+}
+
+.date {
+    margin-left: auto;
+    color: #bbb;
+    text-align: right;
+}
+
 
 .profile h1 {
   font-weight: 400;
@@ -285,7 +330,7 @@ nav.navigation a.button {
 }
 
 #list-page .item {
-  margin: 12px 0;
+  margin: 32px 0;
 }
 
 #list-page .title {
