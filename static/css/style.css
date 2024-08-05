@@ -6,7 +6,7 @@ body {
   line-height: 1;
   font: normal 15px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #404040;
-  line-height: 1.75;
+  line-height: 1.5;
   letter-spacing: 0.008em;
 }
 
@@ -19,12 +19,80 @@ a:hover {
   color: #0366d6;
 }
 
+/* Image Styling */
 .content-center img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%; /* Optional: ensures the image scales down on smaller screens */
+    max-width: 400px;  /* Max width */
+    max-height: 350px; /* Max height */
+    width: auto;       /* Maintain aspect ratio */
+    height: auto;      /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add spacing below image */
 }
+
+/* Divider between posts */
+.post-divider {
+    border: none;
+    border-top: 0px solid #ccc;  /* Gray line */
+    margin: 10px 0;  /* Add some spacing above and below the line */
+}
+
+/* Read More Link */
+.read-more {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.read-more a {
+    color: #5badf0;
+    text-decoration: none;
+}
+
+.read-more a:hover {
+    color: #0366d6;
+    text-decoration: underline;
+}
+
+/* Title Styling */
+.title h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Summary Text Styling */
+.summary-text {
+/*    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px; */
+}
+
+/* Tags and Date Container Styling */
+.tags-date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tags a {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.date a {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
 
 
 /* markdown content styles */
@@ -40,9 +108,9 @@ blockquote {
 hr {
   display: block;
   border: none;
-  height: 2px;
+  height: 1px;
   margin: 40px auto;
-  background: #eee;
+  background: #f0ebeb;
 }
 
 table {
@@ -330,7 +398,7 @@ nav.navigation a.button {
 }
 
 #list-page .item {
-  margin: 32px 0;
+  margin: 10px 0;
 }
 
 #list-page .title {
@@ -338,7 +406,7 @@ nav.navigation a.button {
   color: #404040;
   font-size: 20px;
   font-weight: 400;
-  margin: 0;
+  margin-bottom: 10px;
   width: 80%;
 }
 
