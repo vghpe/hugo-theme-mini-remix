@@ -23,6 +23,12 @@
     {{ if or .Site.Params.showToc .Params.showToc }}
         {{ partial "toc.html" . }}
     {{ end }}
+    
+    {{ if .Params.image }}
+    <div class="content content-center">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+    </div>
+    {{ end }}
 
 
     <div class="content">
