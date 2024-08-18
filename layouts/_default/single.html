@@ -26,9 +26,10 @@
     
     {{ if .Params.image }}
     <div class="content content-center">
-        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+        <img src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="{{ .Title }}">
     </div>
     {{ end }}
+
 
 
     <div class="content">
