@@ -23,16 +23,18 @@
 
     <!-- Summary below the title -->
     <div class="summary-text">
-      {{ .Summary }}
+      {{ .Content | truncate 800 }}
+
     </div>
 
     <!-- Conditional Read More link -->
+
     {{ if .Truncated }}
     <div class="read-more">
       <a href="{{ .RelPermalink }}">Read More</a>
     </div>
     {{ end }}
-
+    
     <!-- Tags and date -->
     <div class="tags-date-container">
       {{ with .Params.tags }}
