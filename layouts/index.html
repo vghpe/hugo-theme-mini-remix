@@ -37,11 +37,12 @@
     <div class="tags-date-container">
       {{ with .Params.tags }}
       <div class="tags">
-        {{ range . }}
-        <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
-        {{ end }}
+          {{ range . }}
+              <a href="{{ "tags/" | absURL }}{{ . | urlize }}" class="tag {{ . | urlize }}">{{ . }}</a>
+          {{ end }}
       </div>
       {{ end }}
+
       <div class="date">
         <a href="{{ .RelPermalink }}"><time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time></a>
       </div>

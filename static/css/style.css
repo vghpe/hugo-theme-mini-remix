@@ -365,20 +365,50 @@ nav.navigation a.button {
 }
 
 
-
 .tags a {
-    background: #f2f2f2;
+    background: #f2f2f2; /* Default background color */
     padding: 4px 7px;
-    color: #757575;
+    color: #757575; /* Default text color */
     font-size: 14px;
     margin-right: 3px;
     text-decoration: none;
     border-radius: 3px;
+    display: inline-block;
 }
 
 .tags a:hover {
-    color: #0366d6;
+    color: #0366d6; /* Hover color */
 }
+
+/* Specific tag styles with very light colors */
+.tags a.fluff {
+    background-color: #f3eaf7; /* Very light lavender */
+}
+
+.tags a.sketches {
+    background-color: #fbeaea; /* Very light pink */
+}
+
+.tags a.research {
+    background-color: #e8f3fb; /* Very light blue */
+}
+
+.tags a.game-dev {
+    background-color: #eef7eb; /* Very light mint */
+}
+
+.tags a.web-dev {
+    background-color: #eaeff9; /* Very light steel blue */
+}
+
+.tags a.design {
+    background-color: #fefbec; /* Very light lemon */
+}
+
+.tags a.shortcut {
+    background-color: #f7eef4; /* Very light orchid */
+}
+
 
 .tags-date-container {
     display: flex;
