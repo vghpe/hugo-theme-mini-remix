@@ -26,7 +26,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;   /* Make sure the image scales within its container */
-    height: auto;      /* Maintain aspect ratio */
+    height: 350px;      /* Maintain aspect ratio */
     margin-bottom: 20px; /* Add spacing below image */
 }
 
@@ -373,7 +373,7 @@ nav.navigation a.button {
     margin-right: 3px;
     text-decoration: none;
     border-radius: 3px;
-    display: inline-block;
+  /* display: inline-block; */
 }
 
 .tags a:hover {
@@ -407,6 +407,10 @@ nav.navigation a.button {
 
 .tags a.shortcut {
     background-color: #f7eef4; /* Very light orchid */
+}
+
+.tags a.gamesindustry {
+    background-color: #f3f7ea; /* Very light olive */
 }
 
 
