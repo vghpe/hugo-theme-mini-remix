@@ -30,13 +30,6 @@ a:hover {
     margin-bottom: 20px; /* Add spacing below image */
 }
 
-.image-caption {
-  font-size: 0.9em;
-  color: #777;
-  text-align: center;
-  margin-top: 0.5em;
-}
-
 
 /* For larger screens */
 @media (min-width: 768px) {

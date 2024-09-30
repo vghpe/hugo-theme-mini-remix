@@ -12,30 +12,23 @@
       <h1>{{ .Title }}</h1> <!-- Title without link -->
     </div>
     
-    <!-- Image or Tweet content -->
+    <!-- Image content -->
     <div class="content content-center">
-      {{ if .Params.tweet }}
-      <blockquote class="twitter-tweet">
-        <a href="{{ .Params.tweet }}"></a>
-      </blockquote>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      {{ if .Params.caption }}
-      <p class="image-caption">{{ .Params.caption }}</p>
-      {{ end }}
-      {{ else if .Params.image }}
-      <img src="{{ .Params.image }}" alt="{{ $.Title }}" />
-      {{ if .Params.caption }}
-      <p class="image-caption">{{ .Params.caption }}</p>
-      {{ end }}
+      {{ with .Params.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" />
       {{ end }}
     </div>
+
+
 
     <!-- Summary below the title -->
     <div class="summary-text">
-     {{ .Content | truncate 250 | markdownify | safeHTML }}
+      {{ .Content | truncate 250 }}
+
     </div>
 
     <!-- Conditional Read More link -->
+
     {{ if .Truncated }}
     <div class="read-more">
       <a href="{{ .RelPermalink }}">Read More</a>
