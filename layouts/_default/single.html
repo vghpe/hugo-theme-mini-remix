@@ -42,9 +42,11 @@
     </div>
     {{ end }}
 
-    <div class="content">
-      {{ .Content }}
-    </div>
+<div class="content">
+    {{ $content := .Content | replaceRE "(<img [^>]*src=\"[^\"]*\"[^>]*alt=\"([^\"]*)\"[^>]*>)" "<div class=\"content-center\">$1<p class=\"image-caption\">$2</p></div>" }}
+    {{ $content | safeHTML }}
+</div>
+
 
     {{ with .Params.tags }}
     <div class="tags">

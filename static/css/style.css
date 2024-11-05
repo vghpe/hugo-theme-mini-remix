@@ -31,11 +31,15 @@ a:hover {
 }
 
 .image-caption {
-  font-size: 0.9em;
-  color: #777;
-  text-align: center;
-  margin-top: 0.5em;
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+    margin-top: 0.5em;
+    max-width: 500px; /* Constrain the caption width */
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 
 /* For larger screens */
