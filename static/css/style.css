@@ -20,15 +20,27 @@ a:hover {
 }
 
 /* Image Styling */
-/* Image Styling */
 .content-center img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;   /* Make sure the image scales within its container */
-    height: 350px;      /* Maintain aspect ratio */
+    max-width: 100%;   /* Ensure the image scales within its container */
+    max-height: 350px; /* Set the maximum height */
+    height: auto;      /* Maintain aspect ratio */
     margin-bottom: 20px; /* Add spacing below image */
 }
+
+.image-caption {
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+    margin-top: 0.5em;
+    max-width: 500px; /* Constrain the caption width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 /* For larger screens */
 @media (min-width: 768px) {
@@ -178,7 +190,9 @@ tr:nth-child(odd)>td {
 }
 
 h1,
-h2,
+h2 {
+    text-align: center;
+}
 h3 {
   font-weight: 400;
 }
@@ -466,7 +480,7 @@ nav.navigation a.button {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 10px;
-  width: 80%;
+  width: 100%;
 }
 
 #list-page .title a {
@@ -479,7 +493,7 @@ nav.navigation a.button {
 }
 
 #list-page .date {
-  width: 20%;
+  width: 28%;
   float: right;
   text-align: right;
   position: relative;

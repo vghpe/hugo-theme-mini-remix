@@ -19,22 +19,34 @@
         </span>
     </div>
 
-    
     {{ if or .Site.Params.showToc .Params.showToc }}
         {{ partial "toc.html" . }}
     {{ end }}
-    
-    {{ if .Params.image }}
+
+    {{ if .Params.tweet }}
+    <div class="content content-center">
+        <blockquote class="twitter-tweet">
+          <a href="{{ .Params.tweet }}"></a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {{ if .Params.caption }}
+        <p class="image-caption">{{ .Params.caption }}</p>
+        {{ end }}
+    </div>
+    {{ else if .Params.image }}
     <div class="content content-center">
         <img src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="{{ .Title }}">
+        {{ if .Params.caption }}
+        <p class="image-caption">{{ .Params.caption }}</p>
+        {{ end }}
     </div>
     {{ end }}
 
+<div class="content">
+    {{ $content := .Content | replaceRE "(<img [^>]*src=\"[^\"]*\"[^>]*alt=\"([^\"]*)\"[^>]*>)" "<div class=\"content-center\">$1<p class=\"image-caption\">$2</p></div>" }}
+    {{ $content | safeHTML }}
+</div>
 
-
-    <div class="content">
-      {{ .Content }}
-    </div>
 
     {{ with .Params.tags }}
     <div class="tags">
@@ -44,10 +56,8 @@
     </div>
     {{ end }}
 
-    
     {{ partial "comment.html" . }}
 
 </section>
 
 {{ end }}
-
