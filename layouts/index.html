@@ -23,7 +23,7 @@
       <p class="image-caption">{{ .Params.caption }}</p>
       {{ end }}
       {{ else if .Params.image }}
-      <img src="{{ .Params.image }}" alt="{{ $.Title }}" />
+      <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
       {{ if .Params.caption }}
       <p class="image-caption">{{ .Params.caption }}</p>
       {{ end }}
