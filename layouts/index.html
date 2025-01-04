@@ -2,9 +2,24 @@
 {{ partial "profile.html" . }}
 
 <div id="list-page">
-  {{ $pages := .Site.RegularPages }}
-  {{ $paginator := .Paginate ($pages) }}
-  {{ range $paginator.Pages }}
+    <!-- 1) Grab all regular pages. -->
+    {{ $allPages := .Site.RegularPages }}
+
+    <!-- 2) Create an empty slice for pages we want to keep. -->
+    {{ $nonFluffPages := slice }}
+
+    <!-- 3) Loop over all pages, only keep those NOT tagged with "fluff". -->
+    {{ range $allPages }}
+      {{ if not (in .Params.tags "fluff") }}
+        {{ $nonFluffPages = $nonFluffPages | append . }}
+      {{ end }}
+    {{ end }}
+
+    <!-- 4) Now paginate the filtered slice. -->
+    {{ $paginator := .Paginate $nonFluffPages }}
+
+    <!-- 5) Loop over the pages as you do now. -->
+    {{ range $paginator.Pages }}
   <section class="item">
 
     <!-- Title below the image -->
