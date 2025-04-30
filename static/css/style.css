@@ -718,3 +718,35 @@ nav.navigation a.button {
   top: 1px;
   color: #bbb;
 }
+
+/* ---- Shortcodes styling ---- */
+/* Responsive iframe container */
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 1em auto;
+}
+.iframe-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Centered audio block */
+.audio-container {
+  text-align: center;
+  margin: 1.5em auto;
+}
+.audio-container audio {
+  max-width: 100%;
+}
+
+/* details/summary styling */
+details { margin: 1em 0; }
+summary { font-weight: bold; cursor: pointer; }
+details summary::after { content: " ▼"; float: right; }
+details[open] summary::after { content: " ▲"; }
